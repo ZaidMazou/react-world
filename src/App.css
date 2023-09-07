@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+.Navigation{
+  width: 10%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navigation ul{
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.Navigation ul li {
+  list-style: none;
+}
+.Navigation ul a {
+  text-decoration: none;
+  color: rgba(26, 72, 210, 0.811);
+}
+.nav-active{
+  border: 1px solid rgba(26, 72, 210, 0.811);
+  padding: 5px;
+  border-radius: 6px;
+}
+.logo{
+  width: 200px;
+  height: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.811);
+  align-self:center;
+  position: relative;
+  left: 50%;
+}
+.logo h3{
   color: white;
+  text-align: center;
+  letter-spacing: 1px;
 }
-
-.App-link {
-  color: #61dafb;
+.logo img{
+  width: 40px;
+  height: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countries-container{
+  width: 90vw;
+  height: 80vh;
+  position: relative;
+  top: 100px;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.countries-container ul{
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  list-style: none;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  background: rgba(255, 255, 255);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card img{
+  width: 300px;
+  height: 200px;
+}
+.card .infos{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+.card :hover
+{
+  background: rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
 }
