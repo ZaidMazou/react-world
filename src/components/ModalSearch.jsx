@@ -1,13 +1,14 @@
 import React from 'react';
 
 const ModalSearch = ({data , closeModal}) => {
+    const formatter = new Intl.ListFormat('fr', { style: 'long', type: 'conjunction' });
     console.log(data);
     const handleclick = () =>{
         closeModal()
     }
     return (
-        <div className=' w-[100vw] h-[100vh] bg-[#0b0b0b3a] fixed inset-0 flex items-center justify-center'>
-            <div className=' w-[90%] h-[90%] bg-white rounded-[15px] flex items-center justify-between'>
+        <div className=' w-[100vw] h-[100vh] bg-[#0b0b0b3a] fixed inset-0 flex items-center justify-center transition-all'>
+            <div className=' w-[90%] h-[90%] bg-[#fefefe] rounded-[15px] flex items-center justify-between'>
                 <div className=' w-1/2 h-full px-[50px]'>
                     {
                         data.flags ? <img src={data.flags.png} alt="" className=' w-full h-full object-contain'/> : <span></span>
@@ -19,10 +20,11 @@ const ModalSearch = ({data , closeModal}) => {
                     </svg>
                     <h2 className=' text-gray-600 text-[32px]'>{ data.name ? data.name.common : 'Pays'}</h2>
                     <div className=' w-[50px] h-[2px] bg-slate-400 mb-10'></div>
-                    <p className=' text-start p-5 text-gray-400'>Surface: <span className=' text-red-500'>{data.area} km2</span></p>
-                    <p className=' text-start p-5 text-gray-400'>Total Population: <span className=' text-red-500'> {data.population} de {data.demonyms.fra.m}</span></p>
+                    <p className=' text-start p-5 text-gray-400'>Surface: <span className=' text-red-500'>{ new Intl.NumberFormat('fr', { maximumSignificantDigits: 3 }).format(data.area)}km2</span></p>
+                    <p className=' text-start p-5 text-gray-400'>Total Population: <span className=' text-red-500'> { new Intl.NumberFormat('fr' , { maximumSignificantDigits: 3}).format(data.population)}  {data.demonyms.fra.m}</span></p>
                     <p className=' text-start p-5 text-gray-400'>Langue Officielle: <span className=' text-red-500'> {data.languages.fra} </span></p>
                     <p className=' text-start p-5 text-gray-400'>Capitale: <span className=' text-red-500'> {data.capital[0]} </span></p>
+                    { data.borders ? <p className=' text-start p-5 text-gray-400'>Pays Limitrophes: <span className=' text-red-500'> {formatter.format(data.borders)} </span></p> : <span></span>}
                     <p className=' text-start p-5 text-gray-400'>Continent: <span className=' text-red-500'> {data.continents} </span></p>
                 </div>
             </div>
