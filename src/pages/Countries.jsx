@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Allcountries from '../components/Allcountries';
 
 const Countries = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Navbar/>
+            <Allcountries/>
+        </>
     );
 };
 
