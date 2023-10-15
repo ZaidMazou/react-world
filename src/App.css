@@ -1,86 +1,82 @@
-.Navigation{
-  width: 10%;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background: #f4faf3;
 }
-.Navigation ul{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.Navigation ul li {
-  list-style: none;
-}
-.Navigation ul a {
-  text-decoration: none;
-  color: rgba(26, 72, 210, 0.811);
-}
-.nav-active{
-  border: 1px solid rgba(26, 72, 210, 0.811);
-  padding: 5px;
-  border-radius: 6px;
-}
-.logo{
-  width: 200px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.811);
-  align-self:center;
-  position: relative;
-  left: 50%;
-}
-.logo h3{
-  color: white;
-  text-align: center;
-  letter-spacing: 1px;
-}
-.logo img{
-  width: 40px;
-  height: 40px;
-}
-.countries-container{
-  width: 90vw;
-  height: 80vh;
-  position: relative;
-  top: 100px;
-  left: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.countries-container ul{
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+header{
+  background: url('/public/world/monde.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .card{
-  list-style: none;
-  width: 300px;
-  height: 200px;
-  margin: 5px;
-  background: rgba(255, 255, 255);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s ;
+  transform: scale(1);
 }
-.card img{
-  width: 300px;
-  height: 200px;
+.card:hover{
+  transform: scale(1.05);
 }
-.card .infos{
-  width: 300px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: rgba(255, 255, 255, 0);
+.footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #fff;
+}
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.footer .container .sec h2{
+  position: relative;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer .container .sec p{
+  color: #555;
+}
+.footer .container .quicklinks{
   position: relative;
 }
-.card :hover
-{
-  background: rgba(0, 0, 0, 0.3);
-  color: rgb(255, 255, 255);
+.footer .container .quicklinks ul li{
+  list-style: none;
+}
+.footer .container .quicklinks ul li a{
+  text-decoration: none;
+  color: #555;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.footer .container .contact .info{
+  position: relative;
+}
+.footer .container .contact .info li{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+.footer .container .contact .info li span{
+  color: #555;
+  font-size: 20px;
+  gap: 10px;
+}
+.footer .container .contact .info li a{
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+.copyrightText{
+  width: 100%;
+  background: #fff;
+  padding: 20px 100px 30px;
+  text-align: center;
+  color: #555;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }

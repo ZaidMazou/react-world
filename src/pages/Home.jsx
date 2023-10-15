@@ -1,16 +1,22 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Logo from '../components/Logo';
-import Countries from '../components/Countries';
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import CardCountries from '../components/CardCountries';
+import Benin from '../components/Benin';
+import Author from '../components/Author';
+import Footer from '../components/Footer';
 
-function Home() {
+const Home = () => {
     return (
-        <div>
-            <Logo/>
-            <Navigation/>
-            <Countries/>
-        </div>
+        <>
+           <Navbar/>
+           <Header/> 
+           <CardCountries/>
+           <Benin/>
+           <Author/>
+           <Footer/>
+        </>
     );
-}
+};
 
 export default Home;

@@ -1,14 +1,23 @@
 import React from 'react';
 
-function Card({country}) {
+const Card = ({data}) => {
     return (
-        <li className="card">
-            <img src={country.flags.svg} alt="" srcset="" />
-            <div className="infos">
-                <h2>{country.translations.fra.common}</h2>
+        <div className=' w-[350px] h-[450px] card flex flex-col m-4'>
+            <div className=' w-full h-1/2'>
+                {
+                    data.flags ? <img src={data.flags.png} alt="" className=' w-full h-full object-cover'/> : <span></span>
+                }
             </div>
-        </li>
+            <div className=' w-full h-1/2 flex items-center justify-center bg-white'>
+                {
+                    data.name ?
+                        <h3 className=' text-blue-500'>{data.name.official}</h3>
+                    :
+                        <span></span>
+                }
+            </div>
+        </div>
     );
-}
+};
 
 export default Card;
