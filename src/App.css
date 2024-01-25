@@ -10,12 +10,7 @@
 body{
   background: #f4faf3;
 }
-header{
-  background: url('/public/world/monde.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s ;

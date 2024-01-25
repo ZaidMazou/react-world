@@ -10,7 +10,7 @@ const Author = () => {
                 <p className=' text-center text-[15px] text-gray-600 mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repudiandae.</p>
                 <div className=' w-full h-auto flex flex-row'>
                     <div className=' w-[60px] h-[60px] m-5'>
-                        <img src="world/monde2.png" alt="" className=' w-full h-full object-cover rounded-[50%]'/>
+                        <img src="world/2.png" alt="" className=' w-full h-full object-cover rounded-[50%]'/>
                     </div>
                     <div className=' w-1/2 h-auto m-5'>
                         <h4 className=' text-[15px] font-bold'>MAZOU Zaid</h4>

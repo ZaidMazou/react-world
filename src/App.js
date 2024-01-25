@@ -6,11 +6,11 @@ import Countries from './pages/Countries';
 function App() {
     return (
         <BrowserRouter>
-        <Routes>
-            <Route path='/'element={<Home />} />
-            <Route path='*'element={<Home />} />
-            <Route path='/countries'element={<Countries />} />
-        </Routes>
+            <Routes>
+                <Route path='/'element={<Home />} />
+                <Route path='*'element={<Home />} />
+                <Route path='/countries'element={<Countries />} />
+            </Routes>
         </BrowserRouter>
     );
 }

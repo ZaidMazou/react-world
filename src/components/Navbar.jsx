@@ -27,7 +27,7 @@ const Navbar = () => {
         getdata()
     }
     return (
-        <nav className=' w-[100vw] h-[70px] flex items-center justify-between px-[100px] fixed z-10 top-0 bg-[#f4faf3]'>
+        <nav className=' w-[100vw] h-[70px] flex items-center justify-between px-[100px] fixed z-10 top-0 bg-[#f4faf3]' id='nav'>
             <span className=' text-[30px] text-gray-800 font-semibold'>World.</span>
             <ul className=' w-[350px] flex items-center justify-between'>
                 <Link to={'/'} className=' text-gray-900'>Home</Link>

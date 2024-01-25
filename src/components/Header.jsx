@@ -1,10 +1,17 @@
 import React from 'react';
+import { Carousel } from 'flowbite-react';
 
 const Header = () => {
     return (
-        <header className=' w-[100vw] h-[80vh] flex items-center justify-center flex-col object-cover mt-[70px]'>
-            <p className=' text-[60px] text-white m-10'>Bienvenu sur notre site World</p>
-        </header>
+        <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
+            <Carousel className=' w-full h-full'>
+                <img src="world/1.png" alt="..." />
+                <img src="world/1.png" alt="..." />
+                <img src="world/1.png" alt="..." />
+                <img src="world/1.png" alt="..." />
+                <img src="world/1.png" alt="..." />
+            </Carousel>
+        </div>
     );
 };
 
